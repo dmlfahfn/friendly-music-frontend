@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import Music from '../Music/Music'
 
 function Login() {
 
@@ -69,7 +70,7 @@ function Login() {
         <div className="app">
         <div className="login-form">
           <div className="title">Sign In</div>
-          {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+          {isSubmitted ? <Music /> : renderForm}
         </div>
       </div>
     );
