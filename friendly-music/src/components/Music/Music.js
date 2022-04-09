@@ -40,20 +40,28 @@ const Music = () => {
     return (
         <div className='random-music-container'>
             <p className='random-first-text'>
-                Här du hitta ny musik att <span>gilla</span>
+                Här kan du hitta ny musik att <span>gilla</span>
                 <br /> och <span>inspirera</span> dina vänner med.
             </p>
-            <div className='random-btns-con'>
+            {/* <div className='random-btns-con'>
                 <a href="true" onClick={fetchMusic} className='new-music-btn'>
                     Slumpa ny musik
                 </a>
-            </div>
+            </div> */}
             <div>
             {loading && <div>Laddar</div>}
             {!loading && (
               <div>
-                <h2>Hämtar Musiken!</h2>
-                {music.map(song => (<ul>{song.data.name}</ul>))}
+                <h2>Albums</h2>
+                {music.map(song => 
+                        (<ul key={song.data.name} className='music-list-ul'>
+                            <img src = {song.data.coverArt.sources[0].url} width={song.data.coverArt.sources[0].width} height={song.data.coverArt.sources[0].height}></img> <br></br> 
+                            <strong>Album:</strong> {song.data.name} <br></br> 
+                            <strong>Artist:</strong> {song.data.artists.items[0].profile.name} <br></br>  
+                            <strong>Album link:</strong> <a href={'https://open.spotify.com/album'+ song.data.uri.match(/\s*(\d+)[^:]*$/)} target='_blank' rel='noreferrer noopener'> {song.data.name} </a> <br></br>
+                            <strong>Date Year:</strong> {song.data.date.year}
+                        </ul>)
+                    )}
               </div>
             )}
             </div>
