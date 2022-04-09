@@ -15,7 +15,6 @@ const Music = () => {
             .get('http://localhost:3001/api')
             .then((res) => {
                 setMusic(res.data.albums.items);
-                console.log("res.data",res.data.albums.items[0].data.name);
             })
             .catch((err) => console.log(err));
             setLoading(false)
