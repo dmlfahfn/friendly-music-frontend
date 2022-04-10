@@ -54,10 +54,10 @@ const Music = () => {
                 <h2>Albums</h2>
                 {music.map(song => 
                         (<ul key={song.data.name} className='music-list-ul'>
-                            <img src = {song.data.coverArt.sources[0].url} width={song.data.coverArt.sources[0].width} height={song.data.coverArt.sources[0].height}></img> <br></br> 
+                            <img src = {song.data.coverArt.sources[0].url} width={song.data.coverArt.sources[0].width} height={song.data.coverArt.sources[0].height} alt='Album Imgage'></img> <br></br> 
                             <strong>Album:</strong> {song.data.name} <br></br> 
                             <strong>Artist:</strong> {song.data.artists.items[0].profile.name} <br></br>  
-                            <strong>Album link:</strong> <a href={'https://open.spotify.com/album'+ song.data.uri.match(/\s*(\d+)[^:]*$/)} target='_blank' rel='noreferrer noopener'> {song.data.name} </a> <br></br>
+                            <strong>Album link:</strong> <a href={'https://open.spotify.com/album/'+ song.data.uri.slice(song.data.uri.lastIndexOf(":")+1)} target='_blank' rel='noreferrer noopener'> {song.data.name} </a> <br></br>
                             <strong>Date Year:</strong> {song.data.date.year}
                         </ul>)
                     )}
