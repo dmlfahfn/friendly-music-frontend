@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const Music = () => {
+const Music = (props) => {
+
+    console.log("props",JSON.stringify(props));
     const [loading, setLoading] = useState(true)
     const [music, setMusic] = useState([]);
 
@@ -39,8 +41,8 @@ const Music = () => {
     return (
         <div className='random-music-container'>
             <p className='random-first-text'>
-                Här kan du hitta ny musik att <span>gilla</span>
-                <br /> och <span>inspirera</span> dina vänner med.
+                Here can you find music to <span>like</span>
+                <br /> and <span>sinpire</span> your friend with.
             </p>
             {/* <div className='random-btns-con'>
                 <a href="true" onClick={fetchMusic} className='new-music-btn'>
@@ -48,7 +50,7 @@ const Music = () => {
                 </a>
             </div> */}
             <div>
-            {loading && <div>Laddar</div>}
+            {loading && <div>Loading</div>}
             {!loading && (
               <div>
                 <h2>Albums</h2>

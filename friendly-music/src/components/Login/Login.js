@@ -6,6 +6,7 @@ function Login() {
 
     const [errorMessages, setErrorMessages] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [id, setId] = useState(null);
 
     const errors = {
         uname: "invalid username",
@@ -31,6 +32,8 @@ function Login() {
 
         const userData = loginUsers.find((user) => user.username === uname.value);
         if (userData) {
+          console.log("userData.id", userData.id);
+          setId(userData.id)
             if (userData.password !== pass.value) {
               setErrorMessages({ name: "pass", message: errors.pass });
             } else {
@@ -70,7 +73,7 @@ function Login() {
         <div className="app">
         <div className="login-form">
           <div className="title">Sign In</div>
-          {isSubmitted ? <Music /> : renderForm}
+          {isSubmitted ? <Music id={id}/> : renderForm}
         </div>
       </div>
     );
