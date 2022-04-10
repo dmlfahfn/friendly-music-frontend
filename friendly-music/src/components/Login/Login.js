@@ -1,6 +1,5 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import Music from '../Music/Music'
 
 function Login() {
 
@@ -17,7 +16,6 @@ function Login() {
     async function fetchUsers() {
         const response = await fetch('http://localhost:3001/user');
         const users = await response.json();
-        console.log(users);
         localStorage.setItem("users", JSON.stringify(users))
       }
        fetchUsers()
@@ -32,12 +30,14 @@ function Login() {
 
         const userData = loginUsers.find((user) => user.username === uname.value);
         if (userData) {
-          console.log("userData.id", userData.id);
           setId(userData.id)
             if (userData.password !== pass.value) {
               setErrorMessages({ name: "pass", message: errors.pass });
             } else {
               setIsSubmitted(true);
+              const status = {userStatus : true, id:userData.id, username : userData.username, pasword: userData.password}
+              console.log(status);
+              localStorage.setItem("loggedIn", JSON.stringify(status))
             }
           } else {
             setErrorMessages({ name: "uname", message: errors.uname });
@@ -73,7 +73,7 @@ function Login() {
         <div className="app">
         <div className="login-form">
           <div className="title">Sign In</div>
-          {isSubmitted ? <Music id={id}/> : renderForm}
+          {isSubmitted ? <div> You have logged in succesfully!</div> : renderForm}
         </div>
       </div>
     );

@@ -1,0 +1,20 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss",
+		"../components/Login/_login.scss",
+		"../components/LikedMusic/_likedMusic.scss",
+		"../components/Navbar/_navbar.scss",
+		"../components/Music/_music.scss"
+	],
+	"sourcesContent": [
+		"@import '../components/Login/_login.scss';\n@import '../components/LikedMusic/_likedMusic.scss';\n@import '../components/Navbar/_navbar.scss';\n@import '../components/Music/_music.scss';",
+		"input[type=\"text\"],\ninput[type=\"password\"] {\n  height: 25px;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n}\n\ninput[type=\"submit\"] {\n  margin-top: 10px;\n  cursor: pointer;\n  font-size: 15px;\n  background: #01d28e;\n  border: 1px solid #01d28e;\n  color: #fff;\n  padding: 10px 20px;\n}\n\ninput[type=\"submit\"]:hover {\n  background: #6cf0c2;\n}\n\n.button-container {\n  display: flex;\n  justify-content: center;\n}\n\n.login-form {\n  background-color: white;\n  padding: 2rem;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n  margin: auto;\n  width: 35vw;\n  display: block;\n  margin-top: 35vh;\n}\n\n.list-container {\n  display: flex;\n}\n\n.error {\n  color: red;\n  font-size: 12px;\n}\n\n.title {\n  font-size: 25px;\n  margin-bottom: 20px;\n}\n\n.input-container {\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n  margin: 10px;\n}",
+		"",
+		"",
+		".login-form {\n    box-shadow: none;\n    // margin-top: 0;\n}\n\n.title {\n    display: none;\n}\n\n.music-list-ul {\n    border: 1px solid rgba(133, 22, 22, 0.055);\n    margin-top: none;\n    width: none;\n    text-align: center;\n}\n\n.music-container {\n    background-color: white;\n    padding: 2rem;\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n    margin: auto;\n    width: 35vw;\n    display: block;\n    margin-top: 5vh;\n}\n\n.music-first-text {\n    text-align: center;\n}"
+	],
+	"names": [],
+	"mappings": ";ACAA,AAAA,KAAK,CAAA,AAAA,IAAC,CAAK,MAAM,AAAX;AACN,KAAK,CAAA,AAAA,IAAC,CAAK,UAAU,AAAf,EAAiB;EACrB,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,kBAAkB;CACrC;;;AAED,AAAA,KAAK,CAAA,AAAA,IAAC,CAAK,QAAQ,AAAb,EAAe;EACnB,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,OAAO;EACf,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,OAAO;EACnB,MAAM,EAAE,iBAAiB;EACzB,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,SAAS;CACnB;;;AAED,AAAA,KAAK,CAAA,AAAA,IAAC,CAAK,QAAQ,AAAb,CAAc,MAAM,CAAC;EACzB,UAAU,EAAE,OAAO;CACpB;;;AAED,AAAA,iBAAiB,CAAC;EAChB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;CACxB;;;AAED,AAAA,WAAW,CAAC;EACV,gBAAgB,EAAE,KAAK;EACvB,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,kBAAkB,EAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,mBAAmB;EAC5E,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,KAAK;EACd,UAAU,EAAE,IAAI;CACjB;;;AAED,AAAA,eAAe,CAAC;EACd,OAAO,EAAE,IAAI;CACd;;;AAED,AAAA,MAAM,CAAC;EACL,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,IAAI;CAChB;;;AAED,AAAA,MAAM,CAAC;EACL,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,IAAI;CACpB;;;AAED,AAAA,gBAAgB,CAAC;EACf,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,GAAG,EAAE,GAAG;EACR,MAAM,EAAE,IAAI;CACb;;;AGtDD,AAAA,WAAW,CAAC;EACR,UAAU,EAAE,IAAI;CAEnB;;;AAED,AAAA,MAAM,CAAC;EACH,OAAO,EAAE,IAAI;CAChB;;;AAED,AAAA,cAAc,CAAC;EACX,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,wBAAwB;EAC1C,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,MAAM;CACrB;;;AAED,AAAA,gBAAgB,CAAC;EACb,gBAAgB,EAAE,KAAK;EACvB,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,kBAAkB,EAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,mBAAmB;EAC5E,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,KAAK;EACd,UAAU,EAAE,GAAG;CAClB;;;AAED,AAAA,iBAAiB,CAAC;EACd,UAAU,EAAE,MAAM;CACrB"
+}

@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Music = (props) => {
-
-    console.log("props",JSON.stringify(props));
+    
     const [loading, setLoading] = useState(true)
     const [music, setMusic] = useState([]);
 
@@ -39,10 +38,10 @@ const Music = (props) => {
     // };
 
     return (
-        <div className='random-music-container'>
-            <p className='random-first-text'>
+        <div className='music-container'>
+            <p className='music-first-text'>
                 Here can you find music to <span>like</span>
-                <br /> and <span>sinpire</span> your friend with.
+                <br /> and <span>inspire</span> your friends with.
             </p>
             {/* <div className='random-btns-con'>
                 <a href="true" onClick={fetchMusic} className='new-music-btn'>

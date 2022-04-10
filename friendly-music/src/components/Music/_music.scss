@@ -1,5 +1,6 @@
 .login-form {
     box-shadow: none;
+    // margin-top: 0;
 }
 
 .title {
@@ -7,8 +8,22 @@
 }
 
 .music-list-ul {
-    border: 1px solid rgba(118, 118, 118, 0.055);
+    border: 1px solid rgba(133, 22, 22, 0.055);
     margin-top: none;
     width: none;
+    text-align: center;
+}
+
+.music-container {
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+    width: 35vw;
+    display: block;
+    margin-top: 5vh;
+}
+
+.music-first-text {
     text-align: center;
 }
