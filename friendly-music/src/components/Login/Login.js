@@ -36,7 +36,6 @@ function Login() {
             } else {
               setIsSubmitted(true);
               const status = {userStatus : true, id:userData.id, username : userData.username, pasword: userData.password}
-              console.log(status);
               localStorage.setItem("loggedIn", JSON.stringify(status))
             }
           } else {

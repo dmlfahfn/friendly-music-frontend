@@ -9,36 +9,31 @@ import './scss/style.scss';
 
 function App() {
 
-  const [user, setUser] = useState();
   let userStat = JSON.parse(localStorage.getItem("loggedIn"))
-
-  setUser(userStat);
 
   return (
     <div className="App">
-      {!user.userStatus ? (
+      {!userStat.userStatus ? (
         <div>
           <div className='header'>
             {/* <button onClick={logOut}>Logga ut</button>{' '} */}
             <p>
-                Hello, <span>{user.username}</span>
+                Hello, <span>{userStat.username}</span>
             </p>{' '}
-        </div>
-        <Navbar user={user.username} />
-      </div>) : (
+          </div>
+          <Navbar user={userStat.username} />
+        </div>) : (
         <div className='app-router'>
         <h1>Friendly Music</h1>
-        <BrowserRouter>
         <Router>
           <Routes>
             <Route path="/" caseSensitive={false} element={<Login />} />
           </Routes>
         </Router>
-        </BrowserRouter>
       </div>
-  )}
+    )}
 
-    </div>
+  </div>
   );
 }
 
