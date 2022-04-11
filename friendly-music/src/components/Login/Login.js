@@ -5,7 +5,6 @@ function Login() {
 
     const [errorMessages, setErrorMessages] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [id, setId] = useState(null);
 
     const errors = {
         uname: "invalid username",
@@ -25,19 +24,30 @@ function Login() {
         e.preventDefault();
 
         let { uname, pass } = document.forms[0];
-
         let loginUsers = JSON.parse(localStorage.getItem("users"))
-
         const userData = loginUsers.find((user) => user.username === uname.value);
+  
         if (userData) {
-          setId(userData.id)
+          const status = {userStatus : false, id : userData.id, username : userData.username, password: userData.password, loggedin: userData.loggedin}
+          localStorage.setItem("loggedIn", JSON.stringify(status))
             if (userData.password !== pass.value) {
               setErrorMessages({ name: "pass", message: errors.pass });
             } else {
               setIsSubmitted(true);
-              const status = {userStatus : true, id:userData.id, username : userData.username, pasword: userData.password}
-              localStorage.setItem("loggedIn", JSON.stringify(status))
-            }
+              userData.loggedin = !userData.loggedin
+              console.log("user",userData);
+              fetch("http://localhost:3001/change", {
+                method: "post",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(userData)
+              })
+              .then(res => res.json())
+              .then(data => {
+                console.log("data",data)
+              });
+              }
           } else {
             setErrorMessages({ name: "uname", message: errors.uname });
           }

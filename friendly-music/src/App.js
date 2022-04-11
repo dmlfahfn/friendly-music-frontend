@@ -10,10 +10,11 @@ import './scss/style.scss';
 function App() {
 
   let userStat = JSON.parse(localStorage.getItem("loggedIn"))
+  console.log("status",userStat);
 
   return (
     <div className="App">
-      {!userStat.userStatus ? (
+      {userStat.userStatus ? (
         <div>
           <div className='header'>
             {/* <button onClick={logOut}>Logga ut</button>{' '} */}
