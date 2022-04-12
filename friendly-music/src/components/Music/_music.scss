@@ -1,10 +1,16 @@
-.login-form {
-    box-shadow: none;
-    // margin-top: 0;
+$font: " Marker Felt", fantasy;
+
+.header {
+    text-align: center;
+    font-family: $font;
 }
 
-.title {
-    display: none;
+span {
+    color: #368763;
+}
+
+h2 {
+    font-family: $font;
 }
 
 .music-list-ul {
@@ -12,6 +18,7 @@
     margin-top: none;
     width: none;
     text-align: center;
+    font-family: $font;
 }
 
 .music-container {
@@ -26,4 +33,6 @@
 
 .music-first-text {
     text-align: center;
+    font-family: $font;
+    font-size: 20px;
 }

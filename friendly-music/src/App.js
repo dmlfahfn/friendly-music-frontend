@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NavLink, Link, BrowserRouter } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Login from './components/Login/Login';
@@ -18,9 +18,9 @@ function App() {
         <div>
           <div className='header'>
             {/* <button onClick={logOut}>Logga ut</button>{' '} */}
-            <p>
+            <h1>
                 Hello, <span>{userStat.username}</span>
-            </p>{' '}
+            </h1>{' '}
           </div>
           <Navbar user={userStat.username} />
         </div>) : (

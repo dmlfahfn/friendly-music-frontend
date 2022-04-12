@@ -8,7 +8,7 @@ function Navbar({ user }) {
     return (
         <Router>
         <Routes>
-          <Route path="/Music" caseSensitive={false} element={<Music />} />
+          <Route path="/" caseSensitive={false} element={<Music />} />
           {/* <Route path="/" caseSensitive={false} element={<Home />} /> */}
           <Route path='*' component='' />{' '}
         </Routes>

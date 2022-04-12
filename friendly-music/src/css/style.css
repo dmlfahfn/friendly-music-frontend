@@ -63,25 +63,32 @@ input[type="submit"]:hover {
   margin: 10px;
 }
 
-/* line 1, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
-.login-form {
-  box-shadow: none;
+/* line 3, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
+.header {
+  text-align: center;
+  font-family: " Marker Felt", fantasy;
 }
 
-/* line 6, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
-.title {
-  display: none;
+/* line 8, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
+span {
+  color: #4c57a4;
 }
 
-/* line 10, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
+/* line 12, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
+h2 {
+  font-family: " Marker Felt", fantasy;
+}
+
+/* line 16, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
 .music-list-ul {
   border: 1px solid rgba(133, 22, 22, 0.055);
   margin-top: none;
   width: none;
   text-align: center;
+  font-family: " Marker Felt", fantasy;
 }
 
-/* line 17, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
+/* line 24, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
 .music-container {
   background-color: white;
   padding: 2rem;
@@ -92,9 +99,16 @@ input[type="submit"]:hover {
   margin-top: 5vh;
 }
 
-/* line 27, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
+/* line 34, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
 .music-first-text {
   text-align: center;
+  font-family: " Marker Felt", fantasy;
+  font-size: 20px;
+}
+
+/* line 6, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/scss/style.scss */
+* {
+  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

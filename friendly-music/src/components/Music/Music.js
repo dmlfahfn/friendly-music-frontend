@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Music = (props) => {
-    
+
     const [loading, setLoading] = useState(true)
     const [music, setMusic] = useState([]);
 
@@ -43,11 +43,6 @@ const Music = (props) => {
                 Here can you find music to <span>like</span>
                 <br /> and <span>inspire</span> your friends with.
             </p>
-            {/* <div className='random-btns-con'>
-                <a href="true" onClick={fetchMusic} className='new-music-btn'>
-                    Slumpa ny musik
-                </a>
-            </div> */}
             <div>
             {loading && <div>Loading</div>}
             {!loading && (
@@ -60,6 +55,16 @@ const Music = (props) => {
                             <strong>Artist:</strong> {song.data.artists.items[0].profile.name} <br></br>  
                             <strong>Album link:</strong> <a href={'https://open.spotify.com/album/'+ song.data.uri.slice(song.data.uri.lastIndexOf(":")+1)} target='_blank' rel='noreferrer noopener'> {song.data.name} </a> <br></br>
                             <strong>Date Year:</strong> {song.data.date.year}
+                            <div>
+                                <button
+                                    // onClick={handleClick}
+                                    title={song.data.name}
+                                    id={song.data.uri}
+                                    imageurl={song.data.uri}
+                                >
+                                    Gilla
+                                </button>
+                            </div>
                         </ul>)
                     )}
               </div>

@@ -34,20 +34,11 @@ function Login() {
               setErrorMessages({ name: "pass", message: errors.pass });
             } else {
               setIsSubmitted(true);
-              userData.loggedin = !userData.loggedin
-              console.log("user",userData);
-              fetch("http://localhost:3001/change", {
-                method: "post",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(userData)
-              })
-              .then(res => res.json())
-              .then(data => {
-                console.log("data",data)
-              });
-              }
+              let update = JSON.parse(localStorage.getItem("loggedIn"))
+              const new_status = { ...update, userStatus: true }
+              console.log("new_status", new_status);
+              localStorage.setItem("loggedIn", JSON.stringify(new_status))
+            }
           } else {
             setErrorMessages({ name: "uname", message: errors.uname });
           }
