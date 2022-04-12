@@ -1,10 +1,9 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 
-function Login() {
-
+function Login(prop) {
+  console.log("prop", !prop.isSubmitted);
     const [errorMessages, setErrorMessages] = useState({});
-    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const errors = {
         uname: "invalid username",
@@ -33,11 +32,7 @@ function Login() {
             if (userData.password !== pass.value) {
               setErrorMessages({ name: "pass", message: errors.pass });
             } else {
-              setIsSubmitted(true);
-              let update = JSON.parse(localStorage.getItem("loggedIn"))
-              const new_status = { ...update, userStatus: true }
-              console.log("new_status", new_status);
-              localStorage.setItem("loggedIn", JSON.stringify(new_status))
+              prop.setIsSubmitted(!prop.isSubmitted)
             }
           } else {
             setErrorMessages({ name: "uname", message: errors.uname });
@@ -73,7 +68,7 @@ function Login() {
         <div className="app">
         <div className="login-form">
           <div className="title">Sign In</div>
-          {isSubmitted ? <div> You have logged in succesfully!</div> : renderForm}
+          {prop.isSubmitted ? <div> You have logged in succesfully!</div> : renderForm}
         </div>
       </div>
     );

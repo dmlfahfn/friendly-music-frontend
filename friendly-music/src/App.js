@@ -8,13 +8,14 @@ import Navbar from './components/Navbar/Navbar';
 import './scss/style.scss';
 
 function App() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   let userStat = JSON.parse(localStorage.getItem("loggedIn"))
   console.log("status",userStat);
 
   return (
     <div className="App">
-      {userStat.userStatus ? (
+      {isSubmitted ? (
         <div>
           <div className='header'>
             {/* <button onClick={logOut}>Logga ut</button>{' '} */}
@@ -28,7 +29,7 @@ function App() {
         <h1>Friendly Music</h1>
         <Router>
           <Routes>
-            <Route path="/" caseSensitive={false} element={<Login />} />
+            <Route path="/" caseSensitive={false} element={<Login {...{ isSubmitted, setIsSubmitted }} />} />
           </Routes>
         </Router>
       </div>
