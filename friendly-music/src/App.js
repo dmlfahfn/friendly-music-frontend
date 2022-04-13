@@ -11,14 +11,18 @@ function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   let userStat = JSON.parse(localStorage.getItem("loggedIn"))
-  console.log("status",userStat);
+  
+  const logOut = (e) => {
+    e.preventDefault()
+    setIsSubmitted(false)
+  }
 
   return (
     <div className="App">
       {isSubmitted ? (
         <div>
           <div className='header'>
-            {/* <button onClick={logOut}>Logga ut</button>{' '} */}
+            <button onClick={logOut}>Logga ut</button>{' '}
             <h1>
                 Hello, <span>{userStat.username}</span>
             </h1>{' '}
