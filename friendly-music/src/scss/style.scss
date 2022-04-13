@@ -8,9 +8,18 @@
     -webkit-font-smoothing: antialiased;
 }
 
-
 .App {
     background-color: #0F0F0F;
+}
+
+button {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #01d28e;
+    border: 1px solid #01d28e;
+    color: #fff;
+    padding: 10px 20px;
 }
 
 .app-name {

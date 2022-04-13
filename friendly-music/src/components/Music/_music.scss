@@ -10,12 +10,12 @@ span {
     color: #1fa669;
 }
 
-h2 {
+.title-category {
     font-family: $font;
     color: white;
 }
 
-.random-music {
+.random-album {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 10px;
@@ -38,6 +38,7 @@ h2 {
     margin: auto;
     display: block;
     margin-top: 5vh;
+    width: auto;
 }
 
 .music-first-text {
@@ -45,4 +46,8 @@ h2 {
     font-family: $font;
     font-size: 20px;
     color: white;
+}
+
+.loading {
+    font-size: 60px;
 }
