@@ -46,8 +46,10 @@ const Music = (props) => {
             <div>
             {loading && <div>Loading</div>}
             {!loading && (
-              <div>
-                <h2>Albums</h2>
+              <div className='random-music'>
+                <div>
+                    <h2>Albums</h2>
+                </div>
                 {music.map(song => 
                         (<ul key={song.data.name} className='music-list-ul'>
                             <img src = {song.data.coverArt.sources[0].url} width={song.data.coverArt.sources[0].width} height={song.data.coverArt.sources[0].height} alt='Album Imgage'></img> <br></br> 
@@ -70,36 +72,6 @@ const Music = (props) => {
               </div>
             )}
             </div>
-            {/* <div>
-                {music.map((music) => (
-                    <div
-                        key={music.Id}
-                        id={music.ImageUrl}
-                        className='random-music-box'
-                    >
-                        <a
-                            href={'https://www.ica.se/recept/' + music.Id}
-                            className='random-music-container'
-                        >
-                            <img
-                                src={music.ImageUrl}
-                                alt='Bilden kunde inte laddas'
-                            />
-                            <p className='random-music-title'>
-                                {music.Title}
-                            </p>
-                        </a>
-                        <button
-                            // onClick={handleClick}
-                            title={music.Title}
-                            id={music.Id}
-                            imageurl={music.ImageUrl}
-                        >
-                            Gilla
-                        </button>
-                    </div>
-                ))}
-            </div> */}
         </div>
     );
 };

@@ -5,9 +5,19 @@
 
 * {
     padding: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 
-// .App {
-//     background-color: rgb(94, 151, 68);
-// }
+.App {
+    background-color: #0F0F0F;
+}
+
+.app-name {
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    position: relative;
+    top: 15vw
+}

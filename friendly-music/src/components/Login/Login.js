@@ -2,7 +2,6 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 
 function Login(prop) {
-  console.log("prop", !prop.isSubmitted);
     const [errorMessages, setErrorMessages] = useState({});
 
     const errors = {

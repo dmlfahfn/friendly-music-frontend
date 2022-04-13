@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -30,7 +30,7 @@ function App() {
           <Navbar user={userStat.username} />
         </div>) : (
         <div className='app-router'>
-        <h1>Friendly Music</h1>
+        <h1 className='app-name'>Friendly Music</h1>
         <Router>
           <Routes>
             <Route path="/" caseSensitive={false} element={<Login {...{ isSubmitted, setIsSubmitted }} />} />

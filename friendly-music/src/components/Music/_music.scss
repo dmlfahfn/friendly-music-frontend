@@ -1,32 +1,41 @@
-$font: " Marker Felt", fantasy;
+$font: "Epidemic", sans-serif;
 
 .header {
     text-align: center;
     font-family: $font;
+    color: white;
 }
 
 span {
-    color: #368763;
+    color: #1fa669;
 }
 
 h2 {
     font-family: $font;
+    color: white;
+}
+
+.random-music {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    column-gap: 50px;
+
 }
 
 .music-list-ul {
-    border: 1px solid rgba(133, 22, 22, 0.055);
     margin-top: none;
     width: none;
     text-align: center;
     font-family: $font;
+    color: white;
+    background-color: #767676;
+    padding: 20px;
 }
 
 .music-container {
-    background-color: white;
     padding: 2rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: auto;
-    width: 35vw;
     display: block;
     margin-top: 5vh;
 }
@@ -35,4 +44,5 @@ h2 {
     text-align: center;
     font-family: $font;
     font-size: 20px;
+    color: white;
 }
