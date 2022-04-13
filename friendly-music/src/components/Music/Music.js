@@ -46,11 +46,12 @@ const Music = (props) => {
             <div>
             {loading && <div className='loading'>Loading</div>}
             {!loading && (
+
               <div className='random-album'>
                 <div>
-                    <h2 className='title-category'>Albums</h2>
-                </div>  
-                <div>
+                <div className='title-category'>
+                      <h2 >Albums</h2>
+                  </div> 
                 {music.map(song => 
                         (<ul key={song.data.name} className='music-list-ul'>
                             <img src = {song.data.coverArt.sources[0].url} width={song.data.coverArt.sources[0].width} height={song.data.coverArt.sources[0].height} alt='Album Imgage'></img> <br></br> 

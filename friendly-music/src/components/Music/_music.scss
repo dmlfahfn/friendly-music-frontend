@@ -13,6 +13,7 @@ span {
 .title-category {
     font-family: $font;
     color: white;
+    background-color: none;
 }
 
 .random-album {
@@ -20,7 +21,8 @@ span {
     grid-template-columns: auto auto auto;
     padding: 10px;
     column-gap: 50px;
-
+    display: flex;
+    justify-content: center;
 }
 
 .music-list-ul {
