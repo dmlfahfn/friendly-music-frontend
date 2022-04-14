@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const Music = (props) => {
+const Music = (prop) => {
 
     const [loading, setLoading] = useState(true)
     const [music, setMusic] = useState([]);
@@ -21,21 +21,23 @@ const Music = (props) => {
             setLoading(false)
     };
 
-    // const handleClick = (evt) => {
-    //     evt.target.textContent = 'Gillat!';
-    //     const mus = fetch('http://localhost:4000/write', {
-    //         method: 'POST',
-    //         body: JSON.stringify({
-    //             Id: evt.target.id,
-    //             Title: evt.target.title,
-    //             ImageUrl: evt.target.parentNode.id,
-    //             LikedBy: prop.user,
-    //         }),
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //     });
-    // };
+    const handleClick = (e) => {
+        e.target.textContent = 'Gillat!';
+        const imageUrl = e.target.parentNode.childNodes[0].getAttribute("imageurl")
+
+        const mus = fetch('http://localhost:3001/write', {
+            method: 'POST',
+            body: JSON.stringify({
+                Id: e.target.id,
+                Title: e.target.title,
+                ImageUrl: imageUrl,
+                LikedBy: prop.user,
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+    };
 
     return (
         <div className='music-container'>
@@ -61,10 +63,10 @@ const Music = (props) => {
                             <strong>Date Year:</strong> {song.data.date.year}
                             <div>
                                 <button
-                                    // onClick={handleClick}
+                                    onClick={handleClick}
                                     title={song.data.name}
                                     id={song.data.uri}
-                                    imageurl={song.data.uri}
+                                    imageurl={song.data.coverArt.sources[0].url}
                                 >
                                     Gilla
                                 </button>
