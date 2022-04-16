@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import { NavLink, Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Redirect } from "react-router-dom";
 
 import Login from './components/Login/Login';
 import Navbar from './components/Navbar/Navbar';
@@ -22,7 +22,7 @@ function App() {
       {isSubmitted ? (
         <div>
           <div className='header'>
-            <button onClick={logOut}>Logga ut</button>{' '}
+            <button onClick={logOut} element = {<Redirect to="/"/>}> Logga ut</button>{' '}
             <h1>
                 Hello, <span>{userStat.username}</span>
             </h1>{' '}

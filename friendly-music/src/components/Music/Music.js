@@ -24,12 +24,13 @@ const Music = (prop) => {
     const handleClick = (e) => {
         e.target.textContent = 'Gillat!';
         const imageUrl = e.target.parentNode.childNodes[0].getAttribute("imageurl")
-
+        
         const mus = fetch('http://localhost:3001/write', {
             method: 'POST',
             body: JSON.stringify({
                 Id: e.target.id,
                 Title: e.target.title,
+                Artist: e.target.artist,
                 ImageUrl: imageUrl,
                 LikedBy: prop.user,
             }),
@@ -67,6 +68,7 @@ const Music = (prop) => {
                                     title={song.data.name}
                                     id={song.data.uri}
                                     imageurl={song.data.coverArt.sources[0].url}
+                                    artist={song.data.artists.items[0].profile.name}
                                 >
                                     Gilla
                                 </button>
