@@ -16,11 +16,8 @@ function Users(prop) {
     const newUserArray = (data) => {
         for(let user in data) {
             if(data[user].username === prop.user){
-                console.log("true");
                 delete data[user]
                 setUsers(data)
-            }else {
-                console.log("false");
             }
         }
     }
@@ -34,7 +31,8 @@ function Users(prop) {
             method: 'POST',
             body: JSON.stringify({
                 Id: e.target.id,
-                User: e.target.user
+                User: e.target.user,
+                Me: prop.user
             }),
             headers: {
                 'Content-Type': 'application/json',
@@ -51,6 +49,7 @@ function Users(prop) {
                     onClick={handleClick}
                     user={user.username}
                     id={user.id}
+                    me={prop.user}
                 >
                     Följ
                 </button>
