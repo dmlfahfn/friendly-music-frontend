@@ -24,8 +24,8 @@ const Music = (prop) => {
     const handleClick = (e) => {
         e.target.textContent = 'Gillat!';
         const imageUrl = e.target.parentNode.childNodes[0].getAttribute("imageurl")
-        
-        const mus = fetch('http://localhost:3001/write', {
+
+        fetch('http://localhost:3001/write', {
             method: 'POST',
             body: JSON.stringify({
                 Id: e.target.id,
