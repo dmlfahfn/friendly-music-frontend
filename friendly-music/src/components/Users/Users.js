@@ -22,16 +22,14 @@ function Users(prop) {
         }
     }
 
-    const handleClick = (e) => {
+    const handleClick = (e, user) => {
         e.preventDefault();
-        console.log(e.target.id);
-        console.log(e.target.user);
 
         fetch('http://localhost:3001/followuser', {
             method: 'POST',
             body: JSON.stringify({
-                Id: e.target.id,
-                User: e.target.user,
+                Id: user.id,
+                User: user.username,
                 Me: prop.user
             }),
             headers: {
@@ -46,10 +44,12 @@ function Users(prop) {
             <div key={user.id} className='users'>
              {'Användare: '}   {user.username} {' '}
                 <button
-                    onClick={handleClick}
                     user={user.username}
                     id={user.id}
                     me={prop.user}
+                    onClick={(e) =>
+                        handleClick( e, user)
+                    }
                 >
                     Följ
                 </button>

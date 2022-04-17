@@ -5,6 +5,7 @@ const Music = (prop) => {
 
     const [loading, setLoading] = useState(true)
     const [music, setMusic] = useState([]);
+    const [playlists, setPlaylists] = useState([]);
 
     useEffect(() => {
       fetchMusic();
@@ -16,23 +17,30 @@ const Music = (prop) => {
             .get('http://localhost:3001/api')
             .then((res) => {
                 setMusic(res.data.albums.items);
+                setPlaylists(res.data.playlists.items);
             })
             .catch((err) => console.log(err));
             setLoading(false)
     };
 
-    const handleClick = (e) => {
+    const handleClick = (isRemove, e, song) => {
         e.target.textContent = 'Gillat!';
-        const imageUrl = e.target.parentNode.childNodes[0].getAttribute("imageurl")
+
+        if (isRemove) {
+            e.target.textContent = 'Ta bort!';
+        } else {
+            e.target.textContent = 'Gillat!';
+        }
 
         fetch('http://localhost:3001/write', {
             method: 'POST',
             body: JSON.stringify({
-                Id: e.target.id,
-                Title: e.target.title,
-                Artist: e.target.artist,
-                ImageUrl: imageUrl,
+                Id: song.uri,
+                Title: song.name,
+                Artist: song.artists.items[0].profile.name,
+                ImageUrl: song.coverArt.sources[0].url,
                 LikedBy: prop.user,
+                Removed: !!isRemove
             }),
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +61,7 @@ const Music = (prop) => {
               <div className='random-album'>
                 <div>
                 <div className='title-category'>
-                      <h2 >Albums</h2>
+                      <h2>Albums</h2>
                   </div> 
                 {music.map(song => 
                         (<ul key={song.data.name} className='music-list-ul'>
@@ -64,17 +72,28 @@ const Music = (prop) => {
                             <strong>Date Year:</strong> {song.data.date.year}
                             <div>
                                 <button
-                                    onClick={handleClick}
-                                    title={song.data.name}
-                                    id={song.data.uri}
-                                    imageurl={song.data.coverArt.sources[0].url}
-                                    artist={song.data.artists.items[0].profile.name}
+                                    onClick={(e) =>
+                                        handleClick(true, e, song.data)
+                                    }
                                 >
                                     Gilla
                                 </button>
                             </div>
                         </ul>)
                     )}
+                    <div className='title-category'>
+                      <h2>Playlist</h2>
+                  </div> 
+                    {playlists.map(list => 
+                        (
+                            <ul key={list.data.uri} className='music-list-ul'>
+                            {/* <img src = {list.data.images.items[1].url} width={list.data.images.items[1].width} height={list.data.images.items[1].height} alt='Album Imgage'></img> <br></br>  */}
+                            {/* <strong>Album:</strong> {song.data.name} <br></br> 
+                            <strong>Artist:</strong> {song.data.artists.items[0].profile.name} <br></br>  
+                            <strong>Album link:</strong> <a href={'https://open.spotify.com/album/'+ song.data.uri.slice(song.data.uri.lastIndexOf(":")+1)} target='_blank' rel='noreferrer noopener'> {song.data.name} </a> <br></br>
+                            <strong>Date Year:</strong> {song.data.date.year} */}
+                            </ul>
+                        ))}
                     </div>
               </div>
             )}

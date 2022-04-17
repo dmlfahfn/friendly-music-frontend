@@ -16,7 +16,7 @@ function Friends(prop) {
         <div className='friends-box'>
             {friends.map(friend => (
                 <div className='friends'>
-                    {friend.User.map(user => {
+                    {friend.User.map((user) => {
                         <ul className='music-list-ul'>Du följer: {user}</ul>
                     })}
                 </div>
