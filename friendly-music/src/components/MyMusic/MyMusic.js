@@ -11,9 +11,11 @@ function MyMusic(prop) {
                 setLikedMusic(data);
             });
     }, []);
+
+    
     return (
         <div className='liked-music'>
-            {likedMusic.slice(0).map(music => (
+            {likedMusic.map(music => (
                 <div key={music._id}>
                     
                    {music.LikedBy.map(liked => (
