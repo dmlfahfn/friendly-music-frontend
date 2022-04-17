@@ -3,26 +3,26 @@ import React, { useEffect, useState } from 'react';
 function Users(prop) {
 
     const [users, setUsers] = useState([])
-    const [index, setIndex] = useState();
 
     useEffect(() => {
         fetch('http://localhost:3001/users')
             .then((resp) => resp.json())
             .then((data) => { 
-                setUsers(data);
-                indexNr(data)
+                newUserArray(data)
             });
     }, []);
 
-    // let arr = []
-    const indexNr = (data) => {
+
+    const newUserArray = (data) => {
         for(let user in data) {
-            
-            // arr.push(data[user].username)
-            console.log("hello",data[user].username);
-            // setIndex(data[user].username.indexOf(prop.user))
+            if(data[user].username === prop.user){
+                console.log("true");
+                delete data[user]
+                setUsers(data)
+            }else {
+                console.log("false");
+            }
         }
-       
     }
 
     const handleClick = (e) => {
@@ -44,9 +44,7 @@ function Users(prop) {
 
     return (
         <div className='user-box'>
-            {
-            // users.splice(index, 1)
-            users.map(user => (     
+            {users.slice(0).map(user => (     
             <div key={user.id} className='users'>
              {'Användare: '}   {user.username} {' '}
                 <button
