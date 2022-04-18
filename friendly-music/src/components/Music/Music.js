@@ -86,12 +86,12 @@ const Music = (prop) => {
                   </div> 
                     {playlists.map(list => 
                         (
-                            <ul key={list.data.uri} className='music-list-ul'>
-                            {/* <img src = {list.data.images.items[1].url} width={list.data.images.items[1].width} height={list.data.images.items[1].height} alt='Album Imgage'></img> <br></br>  */}
-                            {/* <strong>Album:</strong> {song.data.name} <br></br> 
-                            <strong>Artist:</strong> {song.data.artists.items[0].profile.name} <br></br>  
-                            <strong>Album link:</strong> <a href={'https://open.spotify.com/album/'+ song.data.uri.slice(song.data.uri.lastIndexOf(":")+1)} target='_blank' rel='noreferrer noopener'> {song.data.name} </a> <br></br>
-                            <strong>Date Year:</strong> {song.data.date.year} */}
+                            <ul key={list.data.uri} className='play-list-ul'>
+                            <img className='photo' src = {list.data.images.items[0].sources[0].url} alt='Album Imgage'></img> <br></br> 
+                            <strong>Namn:</strong> {list.data.name} <br></br> 
+                            <strong>Beskrivning:</strong> {list.data.description} <br></br> 
+                            <strong>Länk:</strong> <a href={'https://open.spotify.com/playlist/'+ list.data.uri.slice(list.data.uri.lastIndexOf(":")+1)} target='_blank' rel='noreferrer noopener'> {list.data.name} </a> <br></br>
+                            <strong>Ägaren:</strong> {list.data.owner.name}
                             </ul>
                         ))}
                     </div>
