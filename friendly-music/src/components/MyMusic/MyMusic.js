@@ -4,22 +4,21 @@ function MyMusic(prop) {
     const [likedMusic, setLikedMusic] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3001/getlikedmusic')
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user: prop.user })
+        };
+
+        fetch('http://localhost:3001/getlikedmusic', requestOptions)
             .then((resp) => resp.json())
             .then((data) => {
-                newMusicArray(data);
+                setLikedMusic(data);
             });
     }, []);
 
-    const newMusicArray = (data) => {
-        for(let song in data) {
-            console.log("datadata",data[song].LikedBy);
-            if(data[song].LikedBy.includes(prop.user)){
-                delete data[song]
-                setLikedMusic(data)
-            }
-        }
-    }
+        
+    
 
     const handleClick = (isRemove, e ,music) => {
         e.preventDefault();
