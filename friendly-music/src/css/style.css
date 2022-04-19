@@ -90,6 +90,19 @@ a {
   color: #1fa669;
 }
 
+/* line 15, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Navbar/_navbar.scss */
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 750px) {
+  /* line 21, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Navbar/_navbar.scss */
+  nav {
+    display: grid;
+  }
+}
+
 /* line 3, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
 .header {
   text-align: center;
@@ -122,7 +135,7 @@ span {
 /* line 28, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
 .music-list-ul {
   margin-top: none;
-  width: none;
+  width: 35vw;
   text-align: center;
   font-family: "Epidemic", sans-serif;
   color: white;
@@ -152,9 +165,50 @@ span {
   font-size: 60px;
 }
 
+/* line 57, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
+.photo {
+  height: 300px;
+  width: 300px;
+}
+
+@media only screen and (max-width: 884px) {
+  /* line 63, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Music/_music.scss */
+  .photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
 /* line 1, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/MyMusic/_myMusic.scss */
 .liked-music {
   width: 100vw;
+  padding: 10px;
+}
+
+/* line 6, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/MyMusic/_myMusic.scss */
+.my-music {
+  column-gap: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 12, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/MyMusic/_myMusic.scss */
+.music-list-ul {
+  margin-top: none;
+  width: 35vw;
+  text-align: center;
+  font-family: "Epidemic", sans-serif;
+  color: white;
+  background-color: #767676;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 884px) {
+  /* line 23, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/MyMusic/_myMusic.scss */
+  .photo {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 /* line 1, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Users/_users.scss */
@@ -185,10 +239,24 @@ span {
 /* line 6, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Friends/_friends.scss */
 .friends {
   color: white;
-  background-color: #767676;
   text-align: center;
   font-family: "Epidemic", sans-serif;
+  display: block;
+}
+
+/* line 13, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Friends/_friends.scss */
+.my-friends {
+  padding: 10px;
+  column-gap: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 20, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/components/Friends/_friends.scss */
+.friends-list-ul {
   padding: 20px;
+  background-color: #767676;
+  width: 35vw;
 }
 
 /* line 10, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/scss/style.scss */
@@ -220,7 +288,12 @@ button {
   margin: 0;
   padding: 5px;
   position: relative;
-  top: 15vw;
+  top: 10vw;
+}
+
+/* line 38, ../../../../../Users/durreshewarmalik/repos/Examens Arbete/friendly-music-frontend/friendly-music/src/scss/style.scss */
+header > button {
+  margin-left: 800px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -20,14 +20,20 @@ function Friends(prop) {
 
     return (
         <div className='friends-box'>
+            <div className='my-friends'>
             {friends.map(friend => (
                 <div className='friends'>
                     <h2>Du följer:</h2>
                     {friend.User.map((user) => (
-                        <ul key={friend.Id} className='music-list-ul'>{user}</ul>
+                        <ul key={friend.Id} className='friends-list-ul'>{user}
+                           {' '} <button> Sluta Följa!</button>
+                        </ul>
+
                     ))}
+                   
                 </div>
             ))}
+            </div>
         </div>
     )
 }

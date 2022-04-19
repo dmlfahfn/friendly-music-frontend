@@ -1,10 +1,10 @@
 @import '../components/Login/_login.scss';
-@import '../components/LikedMusic/_likedMusic.scss';
 @import '../components/Navbar/_navbar.scss';
 @import '../components/Music/_music.scss';
 @import '../components/MyMusic/_myMusic.scss';
 @import '../components/Users/_users.scss';
 @import '../components/Friends/_friends.scss';
+@import '../components/FriendsMusic/_friendsMusic.scss';
 
 
 * {
@@ -32,5 +32,9 @@ button {
     margin: 0;
     padding: 5px;
     position: relative;
-    top: 15vw
+    top: 10vw
+}
+
+header > button {
+    margin-left: 800px;
 }

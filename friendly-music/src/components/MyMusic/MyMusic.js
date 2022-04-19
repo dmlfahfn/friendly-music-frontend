@@ -23,7 +23,7 @@ function MyMusic(prop) {
     const handleClick = (isRemove, e ,music) => {
         e.preventDefault();
         if (isRemove) {
-            e.target.textContent = 'Ta bort!';
+            e.target.textContent = 'Gilla!';
         } else {
             e.target.textContent = 'Gillat!';
         }
@@ -48,20 +48,22 @@ function MyMusic(prop) {
     return (
         <div className='liked-music'>
             {likedMusic.map(music => (
-                <div key={music._id}>
+                <div className='my-music'>
+                    <div key={music._id}>
                         <ul key={music._id} className='music-list-ul'>
-                       <img src = {music.ImageUrl} width='300' height='300' alt='Album Imgage'></img> <br></br> 
-                       <strong>Album:</strong> {music.Title} <br></br> 
-                       <strong>Artist:</strong> {music.Artist} <br></br>  
-                       <strong>Album link:</strong> <a href={'https://open.spotify.com/album/'+ music.Id.slice(music.Id.lastIndexOf(":")+1)} target='_blank' rel='noreferrer noopener'> {music.Title} </a> <br></br>
-                       <strong>Gillat av:</strong> 
-                        {music.LikedBy.map(by => (
-                           <div> {by} </div>
-                       )
-                    )}
-                     <div>
+                        <img className='photo' src = {music.ImageUrl} width='300' height='300' alt='Album Imgage'></img> <br></br> 
+                        <strong>Album:</strong> {music.Title} <br></br> 
+                        <strong>Artist:</strong> {music.Artist} <br></br>  
+                        <strong>Album link:</strong> <a href={'https://open.spotify.com/album/'+ music.Id.slice(music.Id.lastIndexOf(":")+1)} target='_blank' rel='noreferrer noopener'> {music.Title} </a> <br></br>
+                        <strong>Gillat av:</strong> 
+                         {music.LikedBy.map(by => (
+                            <div> {by} </div>
+                        )
+                        )}
+                <div>
                        {music.LikedBy.includes(prop.user) ? (
                            <button
+                            key={music._id}
                                onClick={(e) =>
                                    handleClick(true, e, music)
                                }
@@ -69,6 +71,7 @@ function MyMusic(prop) {
                                Ogilla!
                            </button>):(
                                <button
+                               key={music._id}
                                onClick={(e) =>
                                    handleClick(false, e, music)
                                }
@@ -78,7 +81,7 @@ function MyMusic(prop) {
                            )}
                        </div>
                        </ul>
-                    )
+                    </div>
                 </div>
                 
             ))}

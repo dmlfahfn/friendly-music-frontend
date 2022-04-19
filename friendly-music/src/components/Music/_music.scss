@@ -35,15 +35,6 @@ span {
     padding: 20px;
 }
 
-.play-list-ul {
-    margin-top: none;
-    width: 35vw;
-    text-align: center;
-    font-family: $font;
-    color: white;
-    background-color: #767676;
-    padding: 20px;
-}
 .music-container {
     padding: 2rem;
     margin: auto;
@@ -66,4 +57,11 @@ span {
 .photo {
     height: 300px;
     width: 300px;
+}
+
+@media only screen and (max-width: 884px){
+    .photo {
+        width: 150px;
+        height: 150px;
+    }
 }
