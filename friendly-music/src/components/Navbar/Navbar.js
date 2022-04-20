@@ -13,19 +13,19 @@ function Navbar({ user }) {
         <Router>
             <div className='navbar'>
                 <nav>
-                    <Link to="/"> Bläddra Musik </Link>
-                    <Link to="/MyMusic"> Min Musik </Link>
+                    <Link to="/"> Mina Musik </Link>
+                    <Link to="/Music"> Bläddra Musik </Link>
                     <Link to="/Users"> Användare </Link>
                     <Link to="/Friends"> Vänner </Link>
-                    <Link to="/FriendsMusic"> Vänners Favoriter </Link>
+                    {/* <Link to="/FriendsMusic"> Vänners Favoriter </Link> */}
                 </nav>
             </div>
         <Routes>
-          <Route path="/" caseSensitive={false} element={<Music user = {user}/>} />
-          <Route path="/MyMusic" caseSensitive={false} element={<MyMusic user = {user}/>} />
+          <Route path="/" caseSensitive={false} element={<MyMusic user = {user}/>} />
+          <Route path="/Music" caseSensitive={false} element={<Music user = {user}/>} />
           <Route path="/Users" caseSensitive={false} element={<Users user = {user}/>} />
           <Route path="/Friends" caseSensitive={false} element={<Friends user = {user}/>} />
-          <Route path="/FriendsMusic" caseSensitive={false} element={<FriendsMusic user = {user}/>} />
+          {/* <Route path="/FriendsMusic" caseSensitive={false} element={<FriendsMusic user = {user}/>} /> */}
           {' '}
         </Routes>
       </Router>

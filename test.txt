@@ -1,0 +1,52 @@
+Two users have tested my application in two different stages. 
+Both users in different ages, women. The first stage has been 
+to test how they use liking music, music list, design, quality and userflow.
+This stage vas during early development.
+
+Stage 1, woman 1 (53 years):
+- Found the design, (previously white background with shadow) 
+more "clean" and extremly simple. "Not much to it!"
+- Music list was extremly small and lacked veraity 
+- Liked the like button but wanted the text to change after the status
+- Userflow was driven by the design for her rather her chosing her steps.
+- Quality was ok, functions worked
+
+Stage 1, woman 2 (28 years):
+- Found the first design very simple yet clean, but does not give
+a music application vibe. Looked more like a book.
+- Small music list, prefer more choices.
+- Preferred to have her own list of liked songs first, and then
+the choice to browse more music.
+- Quality was simple and worked. Button text didn't work.
+
+My understanding and reflections after Stage 1 testing:
+- Design needs to be improved in order to be more eye catching.
+- I need to add more music choices i order to create and attractive
+application.
+- There has to be more functions, i.e. more things to do for the
+user before the user gets tired of the application.
+
+Second stage was done when the developer reached done definition
+of all the issues during the project.
+
+Stage 2, woman 1 (53 years):
+- Design is dark, but not too bad.
+- More music choices since playlist has been added.
+- Used the application more freely, because of the previous 
+familiarity. 
+- Button changed the text during certain stages.
+- Wanted to see a list of music liked by friends, and not everyone
+
+Stage 2, woman 2 (28 years):
+- Liked the design more then the previous one.
+- Liked more choices of music, preferred to have a function to 
+like the playlist as well. 
+- Still preferred to have her own list of liked songs first, and then
+the choice to browse more music.
+- Quality of liking music was good and friends was good. 
+
+My understanding and reflections after Stage 2 testing:
+- Although all the feedback is right and I agree with it,
+but due to lack of time, since I started the project 
+(3 weeks late due to personal reasons and sickness), couldn't reach
+and make these changes after the feedback.

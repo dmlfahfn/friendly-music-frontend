@@ -8,6 +8,8 @@ import Navbar from './components/Navbar/Navbar';
 import './scss/style.scss';
 
 function App() {
+
+  //send prop from app to login in order for it to work for login
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   let userStat = JSON.parse(localStorage.getItem("loggedIn"))

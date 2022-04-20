@@ -1,6 +1,23 @@
-# Getting Started with Create React App
+### `Project name: Friendly Music`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is about showing you Spotify available music. The idea is not only to be able to listen  to music, but also to discover your likes by liking albums, influence and get influenced by find friends and follow them and see what other people have liked.
+
+Folder to enter the project: friendly-music
+
+### `Tech stack choices`
+
+I chose to work with React for my frontend part, sass for css and design and node.js and express for my backend in order to run server and conncet with database. 
+React is a fine framework, espex´cially if you want to build social networking applications and is widely used and accepted. It's easier to build on react and use data within the application scope.
+
+Although sass makes designing easier and more "programming" like. I chose to design minimalistic due to lack of time. More in "Reflection" document.
+
+### `Testing`
+
+This project has been tested by two users in order to understand the userflow. More information in test.txt file
+
+### `Project Rfelection`
+
+More information on reflection.txt
 
 ## Available Scripts
 

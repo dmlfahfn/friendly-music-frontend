@@ -24,7 +24,8 @@ function Login(prop) {
         let { uname, pass } = document.forms[0];
         let loginUsers = JSON.parse(localStorage.getItem("users"))
         const userData = loginUsers.find((user) => user.username === uname.value);
-  
+
+        //if statement to check if the suer is right, then shows the right message
         if (userData) {
           const status = {userStatus : false, id : userData.id, username : userData.username, password: userData.password, loggedin: userData.loggedin}
           localStorage.setItem("loggedIn", JSON.stringify(status))
@@ -42,7 +43,8 @@ function Login(prop) {
     name === errorMessages.name && (
       <div className="error">{errorMessages.message}</div>
     );
-
+    
+    //render the form seperatly tryed this for the first time in react to have form seperate before return
     const renderForm = (
         <div className="form">
           <form onSubmit={handleSubmit}>

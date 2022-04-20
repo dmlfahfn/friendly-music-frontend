@@ -84,6 +84,7 @@ const Music = (prop) => {
                     <div className='title-category'>
                       <h2>Playlist</h2>
                   </div> 
+                  {/* Seperate playlist because different data would have been sent to backend and therefore you can only visit and not like */}
                     {playlists.map(list => 
                         (
                             <ul key={list.data.uri} className='music-list-ul'>

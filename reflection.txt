@@ -1,0 +1,30 @@
+### Friendly Music
+
+The idea of this application was created from the love I have from
+music. I wanted people to knwo what music I like, wanted to 
+inspire others and get inspired when I felt like listening to
+something new. 
+
+The first three weeks didn't go as I planned. Due to some personal
+reasons I couldn't work with the project almost at all, and I got
+sick during that time as well. 
+
+When I started the project I knew that there was a lot to do and I
+might not reach the level of qaulity in the application as I wanted.
+Therefore I decided to keep a simple design of the application and
+divided the work according to the time.
+
+I used github projects as a tool to keep track of all the work that
+needs to bee done, what Iäm doing and what has been done, i.e. completed.
+I had in total 8 issues which I kept track of using github pages. 
+
+I used scrum methodoly to keep moving with the project. Every friday 
+I had a retrospective where I went throught how much has been done
+and what to accomplish next week. Every day I had daily scrums 
+with myself were I went through what I need to do today.
+
+Due to lack of time, I didn't reach the project goal I had in
+my mind and I realised this during the first 3 weeks and when I started.
+But I have tried and made simple done deifintions of user stories ´.
+In short, project still does what the project planning says
+apart from showing music list of friends.
